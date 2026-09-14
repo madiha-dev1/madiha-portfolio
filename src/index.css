@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  background: #05030b;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 75% 12%, rgba(145, 31, 255, .13), transparent 27%),
+    radial-gradient(circle at 18% 42%, rgba(255, 22, 200, .08), transparent 25%),
+    #05030b;
+  color: #fff;
+}
+
+* { box-sizing: border-box; }
+
+::selection {
+  background: rgba(255, 49, 210, .35);
+  color: white;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #05030b; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ff31d2, #7d2cff);
+  border-radius: 20px;
+}
+
+@layer components {
+  .page-shell {
+    @apply relative overflow-hidden border border-white/10 bg-[#07050f]/90 shadow-card;
+  }
+
+  .neon-border {
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 49, 210, .14),
+      0 0 40px rgba(128, 34, 255, .08);
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-white via-[#ffb8ff] to-[#ff31d2] bg-clip-text text-transparent;
+  }
+
+  .script {
+    font-family: cursive;
+    color: #ff8ce8;
+    text-shadow: 0 0 16px rgba(255, 49, 210, .45);
+  }
+
+  .glow-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-[#ff31d2]/70 bg-[#ff31d2] px-5 py-2.5 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:shadow-neon;
+  }
+
+  .ghost-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-[#ff31d2]/60 bg-black/20 px-5 py-2.5 text-sm font-medium text-white transition duration-300 hover:bg-[#ff31d2]/10 hover:shadow-neon;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-white/10 bg-white/[.035] backdrop-blur-md;
+  }
+}
+
+.fade-up {
+  animation: fadeUp .7s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: .65; transform: scale(.98); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
