@@ -44,9 +44,9 @@ const skills = [
 ];
 
 const projects = [
-  { title: "Portfolio Website", type: "Portfolio", text: "A modern portfolio with neon UI and smooth interactions.", tech: ["React", "Tailwind"], image: "/project-1.svg" },
-  { title: "E-commerce Store", type: "E-commerce", text: "A clean shopping experience with product-focused layouts.", tech: ["React", "CSS"], image: "/project-2.svg" },
-  { title: "Blog Website", type: "Web Apps", text: "A responsive blog concept with an elegant content system.", tech: ["React", "UI"], image: "/project-3.svg" },
+  { title: "library management system", type: "Library", text: "A system to manage and organize library resources.", tech: ["React", "Bootstrap"], image: "/project1.png" },
+  { title: "Expense Tracker", type: "Web Apps", text: "A simple app to track daily expenses.", tech: ["React", "Bootstrap"], image: "/project2.png" },
+  { title: "E-commerce Store", type: "E-commerce", text: "E-commerce Store", text: "A clean shopping experience with product-focused layouts.", tech: ["React", "CSS"], image: "project-2.svg" },
   { title: "Task Manager App", type: "Web Apps", text: "Organize tasks with a clean and responsive interface.", tech: ["React", "LocalStorage"], image: "/project-4.svg" },
   { title: "Weather App", type: "Web Apps", text: "Live-weather concept with a simple, beautiful UI.", tech: ["JavaScript", "API"], image: "/project-5.svg" },
   { title: "Landing Page", type: "Portfolio", text: "A modern landing page for a personal or business idea.", tech: ["HTML", "CSS", "JS"], image: "/project-6.svg" },
@@ -386,7 +386,7 @@ function Skills() {
 function ProjectCard({ project }) {
   return (
     <article className="glass-card overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-[#ff31d2]/35">
-      <img src={project.image} alt="" className="h-36 w-full object-cover border-b border-white/10" />
+      <img src={project.image} alt="project-demo" className="h-36 w-full object-cover border-b border-white/10" />
       <div className="p-4">
         <div className="flex items-start justify-between gap-2">
           <h3 className="text-sm font-semibold">{project.title}</h3>
