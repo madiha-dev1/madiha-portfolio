@@ -241,7 +241,7 @@ function About() {
           <div className="relative w-[350px] h-[420px] rounded-[40px] border border-purple-400/40 p-3">
   <div className="w-full h-full rounded-[32px] overflow-hidden bg-purple-500/10">
     <img
-      src="src/assets/about.png"
+      src={about}
       alt="Profile"
       className="w-full h-full object-cover"
     />
@@ -468,7 +468,7 @@ function Experience() {
                   bg-white/5 backdrop-blur-sm">
 
     <img
-      src="src/assets/experience.png"
+      src={experience}
       alt="Madiha"
       className="w-[300px] min-h-[400px] object-cover"
     />
@@ -523,7 +523,7 @@ function Journey() {
                   backdrop-blur-md">
 
     <img
-      src="src/assets/journey.png"
+      src={journey}
       alt="Madiha"
       className="w-full h-full object-cover"
     />
@@ -686,7 +686,7 @@ function App() {
       <div className="relative w-full h-full flex items-center justify-center">
 
         <img
-          src="src/assets/hero.png"
+          src={hero}
           alt="Madiha"
           className="
             relative z-10
