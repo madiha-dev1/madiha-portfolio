@@ -23,6 +23,13 @@ import about from "./assets/about.png";
 import experience from "./assets/experience.png";
 import journey from "./assets/journey.png";
 
+import project1 from "./assets/project1.png";
+import project2 from "./assets/project2.png";
+import project3 from "./assets/project-3.svg";
+import project4 from "./assets/project-4.svg";
+import project5 from "./assets/project-5.svg";
+import project6 from "./assets/project-6.svg";
+
 const navItems = [
   ["Home", "home"],
   ["About", "about"],
@@ -44,12 +51,12 @@ const skills = [
 ];
 
 const projects = [
-  { title: "library management system", type: "Library", text: "A system to manage and organize library resources.", tech: ["React", "Bootstrap"], image: "/project1.png" },
-  { title: "Expense Tracker", type: "Web Apps", text: "A simple app to track daily expenses.", tech: ["React", "Bootstrap"], image: "/project2.png" },
-  { title: "E-commerce Store", type: "E-commerce", text: "E-commerce Store", text: "A clean shopping experience with product-focused layouts.", tech: ["React", "CSS"], image: "/project-3.svg" },
-  { title: "Task Manager App", type: "Web Apps", text: "Organize tasks with a clean and responsive interface.", tech: ["React", "LocalStorage"], image: "/project-4.svg" },
-  { title: "Weather App", type: "Web Apps", text: "Live-weather concept with a simple, beautiful UI.", tech: ["JavaScript", "API"], image: "/project-5.svg" },
-  { title: "Landing Page", type: "Portfolio", text: "A modern landing page for a personal or business idea.", tech: ["HTML", "CSS", "JS"], image: "/project-6.svg" },
+  { title: "library management system", type: "Library", text: "A system to manage and organize library resources.", tech: ["React", "Bootstrap"], image: project1},
+  { title: "Expense Tracker", type: "Web Apps", text: "A simple app to track daily expenses.", tech: ["React", "Bootstrap"], image: project2 },
+  { title: "E-commerce Store", type: "E-commerce", text: "E-commerce Store", text: "A clean shopping experience with product-focused layouts.", tech: ["React", "CSS"], image: project3 },
+  { title: "Task Manager App", type: "Web Apps", text: "Organize tasks with a clean and responsive interface.", tech: ["React", "LocalStorage"], image: project4 },
+  { title: "Weather App", type: "Web Apps", text: "Live-weather concept with a simple, beautiful UI.", tech: ["JavaScript", "API"], image: project5 },
+  { title: "Landing Page", type: "Portfolio", text: "A modern landing page for a personal or business idea.", tech: ["HTML", "CSS", "JS"], image: project6 },
 ];
 
 const posts = [
