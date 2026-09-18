@@ -23,8 +23,8 @@ import about from "./assets/about.png";
 import experience from "./assets/experience.png";
 import journey from "./assets/journey.png";
 
-import project1 from "./assets/project1.png";
-import project2 from "./assets/project2.png";
+import project1 from "../assets/project1.png";
+import project2 from "../assets/project2.png";
 import project3 from "./assets/project-3.svg";
 import project4 from "./assets/project-4.svg";
 import project5 from "./assets/project-5.svg";
