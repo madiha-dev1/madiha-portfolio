@@ -18,10 +18,23 @@ import {
   X
 } from "lucide-react";
 
-import hero from "./assets/hero.png";
-import about from "./assets/about.png";
-import experience from "./assets/experience.png";
-import journey from "./assets/journey.png";
+import aboutImg from './assets/about.png';
+import heroImg from './assets/hero.png';
+import experienceImg from './assets/experience.png';
+import journeyImg from './assets/journey.png';
+
+// FIX: files inside the "public" folder must NOT be imported like normal
+// JS modules — Vite serves them as-is from the site root. Importing them
+// breaks the path once "base" is set in vite.config.js (that's what was
+// causing the 404s). Build the URLs using BASE_URL instead.
+const asset = (name) => `${import.meta.env.BASE_URL}${name}`;
+
+const project1 = asset("project1.png");
+const project2 = asset("project2.png");
+const project3 = asset("project-3.png");
+const project4 = asset("project-4.svg");
+const project5 = asset("project-5.svg");
+const project6 = asset("project-6.svg");
 
 const navItems = [
   ["Home", "home"],
@@ -44,12 +57,12 @@ const skills = [
 ];
 
 const projects = [
-  { title: "library management system", type: "Library", text: "A system to manage and organize library resources.", tech: ["React", "Bootstrap"], image: "/project1.png" },
-  { title: "Expense Tracker", type: "Web Apps", text: "A simple app to track daily expenses.", tech: ["React", "Bootstrap"], image: "/project2.png" },
-  { title: "E-commerce Store", type: "E-commerce", text: "E-commerce Store", text: "A clean shopping experience with product-focused layouts.", tech: ["React", "CSS"], image: "project-2.svg" },
-  { title: "Task Manager App", type: "Web Apps", text: "Organize tasks with a clean and responsive interface.", tech: ["React", "LocalStorage"], image: "/project-4.svg" },
-  { title: "Weather App", type: "Web Apps", text: "Live-weather concept with a simple, beautiful UI.", tech: ["JavaScript", "API"], image: "/project-5.svg" },
-  { title: "Landing Page", type: "Portfolio", text: "A modern landing page for a personal or business idea.", tech: ["HTML", "CSS", "JS"], image: "/project-6.svg" },
+  { title: "library management system", type: "Library", text: "A system to manage and organize library resources.", tech: ["React", "Bootstrap"], image: project1 },
+  { title: "Expense Tracker", type: "Web Apps", text: "A simple app to track daily expenses.", tech: ["React", "Bootstrap"], image: project2 },
+  { title: "E-commerce Store", type: "E-commerce", text: "E-commerce Store", text: "A clean shopping experience with product-focused layouts.", tech: ["React", "CSS"], image: project3 },
+  { title: "Task Manager App", type: "Web Apps", text: "Organize tasks with a clean and responsive interface.", tech: ["React", "LocalStorage"], image: project4 },
+  { title: "Weather App", type: "Web Apps", text: "Live-weather concept with a simple, beautiful UI.", tech: ["JavaScript", "API"], image: project5 },
+  { title: "Landing Page", type: "Portfolio", text: "A modern landing page for a personal or business idea.", tech: ["HTML", "CSS", "JS"], image: project6 },
 ];
 
 const posts = [
@@ -206,7 +219,7 @@ function Home() {
 
         <div className="relative flex h-full min-h-[500px] items-center justify-center lg:min-h-0">
           <div className="absolute h-[100px] w-[100px] rounded-full border border-[#ff31d2]/45 bg-[#a000ff]/10 shadow-[0_0_100px_rgba(255,49,210,.25)] md:h-[435px] md:w-[435px]" />
-          <img src={hero} alt="Madiha portfolio portrait" className="relative z-10 h-[430px] w-[430px] aspect-square rounded-full object-cover drop-shadow-[0_0_45px_rgba(255,49,210,.18)]" />
+          <img src={heroImg} alt="Madiha portfolio portrait" className="relative z-10 h-[430px] w-[430px] aspect-square rounded-full object-cover drop-shadow-[0_0_45px_rgba(255,49,210,.18)]" />
           <p className="script absolute right-4 top-20 z-20 max-w-[170px] rotate-6 text-2xl leading-tight md:right-10">Code<br/>Create<br/>Grow ♡</p>
         </div>
       </div>
@@ -241,7 +254,7 @@ function About() {
           <div className="relative w-[350px] h-[420px] rounded-[40px] border border-purple-400/40 p-3">
   <div className="w-full h-full rounded-[32px] overflow-hidden bg-purple-500/10">
     <img
-      src="src/assets/about.png"
+      src={aboutImg}
       alt="Profile"
       className="w-full h-full object-cover"
     />
@@ -468,7 +481,7 @@ function Experience() {
                   bg-white/5 backdrop-blur-sm">
 
     <img
-      src="src/assets/experience.png"
+      src={experienceImg}
       alt="Madiha"
       className="w-[300px] min-h-[400px] object-cover"
     />
@@ -523,7 +536,7 @@ function Journey() {
                   backdrop-blur-md">
 
     <img
-      src="src/assets/journey.png"
+      src={journeyImg}
       alt="Madiha"
       className="w-full h-full object-cover"
     />
@@ -686,7 +699,7 @@ function App() {
       <div className="relative w-full h-full flex items-center justify-center">
 
         <img
-          src="src/assets/hero.png"
+          src={heroImg}
           alt="Madiha"
           className="
             relative z-10
