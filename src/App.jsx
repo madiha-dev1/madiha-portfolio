@@ -213,7 +213,7 @@ function Home() {
 
         <div className="relative flex h-full min-h-[500px] items-center justify-center lg:min-h-0">
           <div className="absolute h-[100px] w-[100px] rounded-full border border-[#ff31d2]/45 bg-[#a000ff]/10 shadow-[0_0_100px_rgba(255,49,210,.25)] md:h-[435px] md:w-[435px]" />
-          <img src={hero} alt="Madiha portfolio portrait" className="relative z-10 h-[430px] w-[430px] aspect-square rounded-full object-cover drop-shadow-[0_0_45px_rgba(255,49,210,.18)]" />
+          <img src={about} alt="Madiha portfolio portrait" className="relative z-10 h-[430px] w-[430px] aspect-square rounded-full object-cover drop-shadow-[0_0_45px_rgba(255,49,210,.18)]" />
           <p className="script absolute right-4 top-20 z-20 max-w-[170px] rotate-6 text-2xl leading-tight md:right-10">Code<br/>Create<br/>Grow ♡</p>
         </div>
       </div>
