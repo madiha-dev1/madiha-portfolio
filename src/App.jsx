@@ -18,10 +18,10 @@ import {
   X
 } from "lucide-react";
 
-import hero from "./assets/hero.png";
-import about from "./assets/about.png";
-import experience from "./assets/experience.png";
-import journey from "./assets/journey.png";
+import hero from "../assets/hero.png";
+import about from "../assets/about.png";
+import experience from "../assets/experience.png";
+import journey from "../assets/journey.png";
 
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
