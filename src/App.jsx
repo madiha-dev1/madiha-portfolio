@@ -23,10 +23,6 @@ import heroImg from './assets/hero.png';
 import experienceImg from './assets/experience.png';
 import journeyImg from './assets/journey.png';
 
-// FIX: files inside the "public" folder must NOT be imported like normal
-// JS modules — Vite serves them as-is from the site root. Importing them
-// breaks the path once "base" is set in vite.config.js (that's what was
-// causing the 404s). Build the URLs using BASE_URL instead.
 const asset = (name) => `${import.meta.env.BASE_URL}${name}`;
 
 const project1 = asset("project1.png");
@@ -59,7 +55,7 @@ const skills = [
 const projects = [
   { title: "library management system", type: "Library", text: "A system to manage and organize library resources.", tech: ["React", "Bootstrap"], image: project1 },
   { title: "Expense Tracker", type: "Web Apps", text: "A simple app to track daily expenses.", tech: ["React", "Bootstrap"], image: project2 },
-  { title: "E-commerce Store", type: "E-commerce", text: "E-commerce Store", text: "A clean shopping experience with product-focused layouts.", tech: ["React", "CSS"], image: project3 },
+  { title: "E-commerce Store", type: "E-commerce", text: "A clean shopping experience with product-focused layouts.", tech: ["React", "CSS"], image: project3 },
   { title: "Task Manager App", type: "Web Apps", text: "Organize tasks with a clean and responsive interface.", tech: ["React", "LocalStorage"], image: project4 },
   { title: "Weather App", type: "Web Apps", text: "Live-weather concept with a simple, beautiful UI.", tech: ["JavaScript", "API"], image: project5 },
   { title: "Landing Page", type: "Portfolio", text: "A modern landing page for a personal or business idea.", tech: ["HTML", "CSS", "JS"], image: project6 },
@@ -139,7 +135,7 @@ function GlowBackground() {
 
 function Home() {
   return (
-    <section id="home" className="page-shell neon-border min-h-[px] scroll-mt-24 rounded-3xl">
+    <section id="home" className="page-shell neon-border min-h-[600px] scroll-mt-24 rounded-3xl">
       <GlowBackground />
       <div className="relative grid min-h-[600px] items-center lg:grid-cols-[1fr_1.05fr]">
         <div className="z-10 px-7 py-24 md:px-14 lg:py-28">
@@ -156,70 +152,72 @@ function Home() {
             <a className="glow-btn" href="#projects">View My Projects <ArrowRight size={15} /></a>
             <a className="ghost-btn" href="#contact">Contact Me</a>
           </div>
-         <div className="mt-7 flex gap-3">
+          <div className="mt-7 flex gap-3">
 
-  <a
-    href="https://www.linkedin.com/in/madiha-dev-31554142a/"
-    className="group flex h-10 w-10 items-center justify-center rounded-full
-               border border-white/10 bg-white/[0.04]
-               text-white/65 transition-all duration-300
-               hover:border-purple-400
-               hover:bg-purple-500/20
-               hover:text-purple-200
-               hover:shadow-[0_0_20px_rgba(168,85,247,0.7)]
-               hover:-translate-y-1"
-  >
-    <Linkedin size={18} />
-  </a>
+            <a
+              href="https://www.linkedin.com/in/madiha-dev-31554142a/"
+              className="group flex h-10 w-10 items-center justify-center rounded-full
+                         border border-white/10 bg-white/[0.04]
+                         text-white/65 transition-all duration-300
+                         hover:border-purple-400
+                         hover:bg-purple-500/20
+                         hover:text-purple-200
+                         hover:shadow-[0_0_20px_rgba(168,85,247,0.7)]
+                         hover:-translate-y-1"
+            >
+              <Linkedin size={18} />
+            </a>
 
-  <a
-    href="https://github.com/madiha-dev1"
-    className="group flex h-10 w-10 items-center justify-center rounded-full
-               border border-white/10 bg-white/[0.04]
-               text-white/65 transition-all duration-300
-               hover:border-purple-400
-               hover:bg-purple-500/20
-               hover:text-purple-200
-               hover:shadow-[0_0_20px_rgba(168,85,247,0.7)]
-               hover:-translate-y-1"
-  >
-    <Github size={18} />
-  </a>
+            <a
+              href="https://github.com/madiha-dev1"
+              className="group flex h-10 w-10 items-center justify-center rounded-full
+                         border border-white/10 bg-white/[0.04]
+                         text-white/65 transition-all duration-300
+                         hover:border-purple-400
+                         hover:bg-purple-500/20
+                         hover:text-purple-200
+                         hover:shadow-[0_0_20px_rgba(168,85,247,0.7)]
+                         hover:-translate-y-1"
+            >
+              <Github size={18} />
+            </a>
 
-  <a
-    href="https://instagram.com/madihadev08⁠"
-    className="group flex h-10 w-10 items-center justify-center rounded-full
-               border border-white/10 bg-white/[0.04]
-               text-white/65 transition-all duration-300
-               hover:border-purple-400
-               hover:bg-purple-500/20
-               hover:text-purple-200
-               hover:shadow-[0_0_20px_rgba(168,85,247,0.7)]
-               hover:-translate-y-1"
-  >
-    <Instagram size={18} />
-  </a>
+            <a
+              href="https://instagram.com/madihadev08"
+              className="group flex h-10 w-10 items-center justify-center rounded-full
+                         border border-white/10 bg-white/[0.04]
+                         text-white/65 transition-all duration-300
+                         hover:border-purple-400
+                         hover:bg-purple-500/20
+                         hover:text-purple-200
+                         hover:shadow-[0_0_20px_rgba(168,85,247,0.7)]
+                         hover:-translate-y-1"
+            >
+              <Instagram size={18} />
+            </a>
 
-  <a
-    href="https://www.madihadev785@gmail.com"
-    className="group flex h-10 w-10 items-center justify-center rounded-full
-               border border-white/10 bg-white/[0.04]
-               text-white/65 transition-all duration-300
-               hover:border-purple-400
-               hover:bg-purple-500/20
-               hover:text-purple-200
-               hover:shadow-[0_0_20px_rgba(168,85,247,0.7)]
-               hover:-translate-y-1"
-  >
-    <Mail size={18} />
-  </a>
+            <a
+              href="mailto:madihadev785@gmail.com"
+              className="group flex h-10 w-10 items-center justify-center rounded-full
+                         border border-white/10 bg-white/[0.04]
+                         text-white/65 transition-all duration-300
+                         hover:border-purple-400
+                         hover:bg-purple-500/20
+                         hover:text-purple-200
+                         hover:shadow-[0_0_20px_rgba(168,85,247,0.7)]
+                         hover:-translate-y-1"
+            >
+              <Mail size={18} />
+            </a>
 
-</div>
+          </div>
         </div>
 
         <div className="relative flex h-full min-h-[500px] items-center justify-center lg:min-h-0">
           <div className="absolute h-[100px] w-[100px] rounded-full border border-[#ff31d2]/45 bg-[#a000ff]/10 shadow-[0_0_100px_rgba(255,49,210,.25)] md:h-[435px] md:w-[435px]" />
+
           <img src={heroImg} alt="Madiha portfolio portrait" className="relative z-10 h-[430px] w-[430px] aspect-square rounded-full object-cover drop-shadow-[0_0_45px_rgba(255,49,210,.18)]" />
+
           <p className="script absolute right-4 top-20 z-20 max-w-[170px] rotate-6 text-2xl leading-tight md:right-10">Code<br/>Create<br/>Grow ♡</p>
         </div>
       </div>
@@ -250,16 +248,16 @@ function About() {
           </div>
         </div>
         <div className="relative flex min-h-[430px] items-center justify-center">
-          
+
           <div className="relative w-[350px] h-[420px] rounded-[40px] border border-purple-400/40 p-3">
-  <div className="w-full h-full rounded-[32px] overflow-hidden bg-purple-500/10">
-    <img
-      src={aboutImg}
-      alt="Profile"
-      className="w-full h-full object-cover"
-    />
-  </div>
-</div>
+            <div className="w-full h-full rounded-[32px] overflow-hidden bg-purple-500/10">
+              <img
+                src={aboutImg}
+                alt="Profile"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
           <p className="script absolute bottom-8 right-0 max-w-[130px] -rotate-6 text-2xl leading-tight">Better<br/>Version<br/>of Me ♡</p>
         </div>
       </div>
@@ -283,116 +281,104 @@ function Skills() {
   return (
     <section id="skills" className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#07050f] px-6 py-16 md:px-12">
 
-  {/* Background Glow */}
-  <div className="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-[#ff31d2]/10 blur-[120px]" />
-  <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-[#7c2cff]/10 blur-[130px]" />
+      <div className="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-[#ff31d2]/10 blur-[120px]" />
+      <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-[#7c2cff]/10 blur-[130px]" />
 
-  <div className="relative z-10">
+      <div className="relative z-10">
 
-    {/* Heading */}
-    <div className="mb-12">
-      <p className="font-[cursive] text-lg text-[#ff75df]">
-        What I work with ♡
-      </p>
+        <div className="mb-12">
+          <p className="font-[cursive] text-lg text-[#ff75df]">
+            What I work with ♡
+          </p>
 
-      <h2 className="mt-2 text-4xl font-semibold text-white md:text-5xl">
-        My Skills <span className="text-[#ff4fd8]">♡</span>
-      </h2>
+          <h2 className="mt-2 text-4xl font-semibold text-white md:text-5xl">
+            My Skills <span className="text-[#ff4fd8]">♡</span>
+          </h2>
 
-      <p className="mt-3 max-w-xl text-sm leading-6 text-white/50">
-        Technologies and tools I use to create modern, responsive and
-        user-friendly websites.
-      </p>
-    </div>
-
-    {/* Skills Grid */}
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-
-      {/* HTML */}
-      <div className="group rounded-2xl border border-orange-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-orange-400/60 hover:shadow-[0_0_35px_rgba(249,115,22,0.18)]">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-orange-400/30 bg-orange-500/10 text-2xl font-bold text-orange-400">
-          HTML
+          <p className="mt-3 max-w-xl text-sm leading-6 text-white/50">
+            Technologies and tools I use to create modern, responsive and
+            user-friendly websites.
+          </p>
         </div>
-        <h3 className="mt-4 text-sm font-semibold text-white">HTML</h3>
-        <p className="mt-1 text-xs text-white/40">Structure</p>
-      </div>
 
-      {/* CSS */}
-      <div className="group rounded-2xl border border-blue-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-blue-400/60 hover:shadow-[0_0_35px_rgba(59,130,246,0.18)]">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-blue-400/30 bg-blue-500/10 text-2xl font-bold text-blue-400">
-          CSS
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+
+          <div className="group rounded-2xl border border-orange-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-orange-400/60 hover:shadow-[0_0_35px_rgba(249,115,22,0.18)]">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-orange-400/30 bg-orange-500/10 text-2xl font-bold text-orange-400">
+              HTML
+            </div>
+            <h3 className="mt-4 text-sm font-semibold text-white">HTML</h3>
+            <p className="mt-1 text-xs text-white/40">Structure</p>
+          </div>
+
+          <div className="group rounded-2xl border border-blue-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-blue-400/60 hover:shadow-[0_0_35px_rgba(59,130,246,0.18)]">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-blue-400/30 bg-blue-500/10 text-2xl font-bold text-blue-400">
+              CSS
+            </div>
+            <h3 className="mt-4 text-sm font-semibold text-white">CSS</h3>
+            <p className="mt-1 text-xs text-white/40">Styling</p>
+          </div>
+
+          <div className="group rounded-2xl border border-yellow-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-yellow-400/60 hover:shadow-[0_0_35px_rgba(234,179,8,0.18)]">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-yellow-400/30 bg-yellow-500/10 text-xl font-bold text-yellow-400">
+              JS
+            </div>
+            <h3 className="mt-4 text-sm font-semibold text-white">JavaScript</h3>
+            <p className="mt-1 text-xs text-white/40">Logic</p>
+          </div>
+
+          <div className="group rounded-2xl border border-cyan-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-cyan-400/60 hover:shadow-[0_0_35px_rgba(6,182,212,0.18)]">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-cyan-400/30 bg-cyan-500/10 text-2xl text-cyan-400">
+              ⚛
+            </div>
+            <h3 className="mt-4 text-sm font-semibold text-white">React JS</h3>
+            <p className="mt-1 text-xs text-white/40">Frontend</p>
+          </div>
+
+          <div className="group rounded-2xl border border-purple-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-purple-400/60 hover:shadow-[0_0_35px_rgba(168,85,247,0.18)]">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-purple-400/30 bg-purple-500/10 text-2xl font-bold text-purple-400">
+              B
+            </div>
+            <h3 className="mt-4 text-sm font-semibold text-white">Bootstrap</h3>
+            <p className="mt-1 text-xs text-white/40">UI Framework</p>
+          </div>
+
+          <div className="group rounded-2xl border border-sky-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-sky-400/60 hover:shadow-[0_0_35px_rgba(14,165,233,0.18)]">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-sky-400/30 bg-sky-500/10 text-xl font-bold text-sky-400">
+              Py
+            </div>
+            <h3 className="mt-4 text-sm font-semibold text-white">Python</h3>
+            <p className="mt-1 text-xs text-white/40">Backend</p>
+          </div>
+
+          <div className="group rounded-2xl border border-emerald-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-emerald-400/60 hover:shadow-[0_0_35px_rgba(16,185,129,0.18)]">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-emerald-400/30 bg-emerald-500/10 text-xl font-bold text-emerald-400">
+              DJ
+            </div>
+            <h3 className="mt-4 text-sm font-semibold text-white">Django</h3>
+            <p className="mt-1 text-xs text-white/40">Backend</p>
+          </div>
+
+          <div className="group rounded-2xl border border-indigo-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-indigo-400/60 hover:shadow-[0_0_35px_rgba(99,102,241,0.18)]">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-indigo-400/30 bg-indigo-500/10 text-lg font-bold text-indigo-400">
+              PG
+            </div>
+            <h3 className="mt-4 text-sm font-semibold text-white">
+              PostgreSQL
+            </h3>
+            <p className="mt-1 text-xs text-white/40">Database</p>
+          </div>
+
         </div>
-        <h3 className="mt-4 text-sm font-semibold text-white">CSS</h3>
-        <p className="mt-1 text-xs text-white/40">Styling</p>
-      </div>
 
-      {/* JavaScript */}
-      <div className="group rounded-2xl border border-yellow-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-yellow-400/60 hover:shadow-[0_0_35px_rgba(234,179,8,0.18)]">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-yellow-400/30 bg-yellow-500/10 text-xl font-bold text-yellow-400">
-          JS
+        <div className="mt-12 text-right">
+          <p className="rotate-[-5deg] font-[cursive] text-xl text-[#ff70df]">
+            Still learning, still growing ♡
+          </p>
         </div>
-        <h3 className="mt-4 text-sm font-semibold text-white">JavaScript</h3>
-        <p className="mt-1 text-xs text-white/40">Logic</p>
+
       </div>
-
-      {/* React */}
-      <div className="group rounded-2xl border border-cyan-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-cyan-400/60 hover:shadow-[0_0_35px_rgba(6,182,212,0.18)]">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-cyan-400/30 bg-cyan-500/10 text-2xl text-cyan-400">
-          ⚛
-        </div>
-        <h3 className="mt-4 text-sm font-semibold text-white">React JS</h3>
-        <p className="mt-1 text-xs text-white/40">Frontend</p>
-      </div>
-
-      {/* Bootstrap */}
-      <div className="group rounded-2xl border border-purple-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-purple-400/60 hover:shadow-[0_0_35px_rgba(168,85,247,0.18)]">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-purple-400/30 bg-purple-500/10 text-2xl font-bold text-purple-400">
-          B
-        </div>
-        <h3 className="mt-4 text-sm font-semibold text-white">Bootstrap</h3>
-        <p className="mt-1 text-xs text-white/40">UI Framework</p>
-      </div>
-
-      {/* Python */}
-      <div className="group rounded-2xl border border-sky-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-sky-400/60 hover:shadow-[0_0_35px_rgba(14,165,233,0.18)]">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-sky-400/30 bg-sky-500/10 text-xl font-bold text-sky-400">
-          Py
-        </div>
-        <h3 className="mt-4 text-sm font-semibold text-white">Python</h3>
-        <p className="mt-1 text-xs text-white/40">Backend</p>
-      </div>
-
-      {/* Django */}
-      <div className="group rounded-2xl border border-emerald-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-emerald-400/60 hover:shadow-[0_0_35px_rgba(16,185,129,0.18)]">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-emerald-400/30 bg-emerald-500/10 text-xl font-bold text-emerald-400">
-          DJ
-        </div>
-        <h3 className="mt-4 text-sm font-semibold text-white">Django</h3>
-        <p className="mt-1 text-xs text-white/40">Backend</p>
-      </div>
-
-      {/* PostgreSQL */}
-      <div className="group rounded-2xl border border-indigo-500/20 bg-white/[0.03] p-6 text-center backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-indigo-400/60 hover:shadow-[0_0_35px_rgba(99,102,241,0.18)]">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-indigo-400/30 bg-indigo-500/10 text-lg font-bold text-indigo-400">
-          PG
-        </div>
-        <h3 className="mt-4 text-sm font-semibold text-white">
-          PostgreSQL
-        </h3>
-        <p className="mt-1 text-xs text-white/40">Database</p>
-      </div>
-
-    </div>
-
-    {/* Bottom Text */}
-    <div className="mt-12 text-right">
-      <p className="rotate-[-5deg] font-[cursive] text-xl text-[#ff70df]">
-        Still learning, still growing ♡
-      </p>
-    </div>
-
-  </div>
-</section>
+    </section>
   );
 }
 
@@ -441,7 +427,7 @@ function Projects() {
 
 function Experience() {
   const items = [
-    ["2026 — Present", " full-stack Web Development Backend learning", "Working on python and Django , postgresql for backend development."],
+    ["2026 — Present", "full-stack Web Development Backend learning", "Working on python and Django, postgresql for backend development."],
     ["2025 — 2026", "Front-End Developer (Self Taught)", "Learned HTML, CSS, JavaScript, React and Bootstrap through projects and regular practice."],
     ["2024 — 2025", "WordPress & Shopify", "Built basic websites and explored theme customization and store setup."],
   ];
@@ -453,7 +439,7 @@ function Experience() {
         <div>
           <SectionTitle eyebrow="My Experience" title="My Experience" text="My journey so far in web development." />
           <div className="relative ml-2 border-l border-[#ff31d2]/60 pl-7">
-            {items.map(([date, title, text], i) => (
+            {items.map(([date, title, text]) => (
               <div key={title} className="relative mb-9 last:mb-0">
                 <span className="absolute -left-[35px] top-1 h-3 w-3 rounded-full bg-[#ff4bd7] shadow-[0_0_16px_#ff31d2]" />
                 <p className="text-xs font-medium text-white/65">{date}</p>
@@ -466,33 +452,28 @@ function Experience() {
 
         <div className="relative w-[380px] h-[480px] flex items-center justify-center">
 
-  {/* Glow */}
-  <div className="absolute w-[300px] h-[380px] bg-fuchsia-500/20 blur-[80px]" />
+          <div className="absolute w-[300px] h-[380px] bg-fuchsia-500/20 blur-[80px]" />
 
-  {/* Outer rotated frame */}
-  <div className="absolute w-[310px] h-[400px] rounded-[45px] border border-fuchsia-400/40 rotate-6" />
+          <div className="absolute w-[310px] h-[400px] rounded-[45px] border border-fuchsia-400/40 rotate-6" />
 
-  {/* Inner rotated frame */}
-  <div className="absolute w-[310px] h-[400px] rounded-[45px] border border-purple-400/30 -rotate-6" />
+          <div className="absolute w-[310px] h-[400px] rounded-[45px] border border-purple-400/30 -rotate-6" />
 
-  {/* Main frame */}
-  <div className="relative w-[300px] h-[390px] rounded-[40px] overflow-hidden
-                  border border-white/20
-                  bg-white/5 backdrop-blur-sm">
+          <div className="relative w-[300px] h-[390px] rounded-[40px] overflow-hidden
+                          border border-white/20
+                          bg-white/5 backdrop-blur-sm">
 
-    <img
-      src={experienceImg}
-      alt="Madiha"
-      className="w-[300px] min-h-[400px] object-cover"
-    />
+            <img
+              src={experienceImg}
+              alt="Madiha"
+              className="w-[300px] min-h-[400px] object-cover"
+            />
 
-  </div>
+          </div>
 
-  {/* Small decorative dots */}
-  <div className="absolute top-10 right-4 w-3 h-3 rounded-full bg-fuchsia-400" />
-  <div className="absolute bottom-16 left-3 w-2 h-2 rounded-full bg-purple-300" />
+          <div className="absolute top-10 right-4 w-3 h-3 rounded-full bg-fuchsia-400" />
+          <div className="absolute bottom-16 left-3 w-2 h-2 rounded-full bg-purple-300" />
 
-</div>
+        </div>
       </div>
     </section>
   );
@@ -521,36 +502,32 @@ function Journey() {
         </div>
         <div className="relative w-[330px] h-[440px] flex items-center justify-center">
 
-  {/* Glow */}
-  <div className="absolute inset-8 bg-purple-500/20 blur-[70px]" />
+          <div className="absolute inset-8 bg-purple-500/20 blur-[70px]" />
 
-  {/* Back frame */}
-  <div className="absolute inset-5 border border-purple-400/30 rounded-[25px] rotate-3" />
+          <div className="absolute inset-5 border border-purple-400/30 rounded-[25px] rotate-3" />
 
-  {/* Main frame */}
-  <div className="relative w-[300px] h-[410px] overflow-hidden
-                  bg-gradient-to-br from-purple-500/20 to-pink-500/5
-                  border border-white/20
-                  rounded-tl-[70px] rounded-br-[70px]
-                  rounded-tr-[20px] rounded-bl-[20px]
-                  backdrop-blur-md">
+          <div className="relative w-[300px] h-[410px] overflow-hidden
+                          bg-gradient-to-br from-purple-500/20 to-pink-500/5
+                          border border-white/20
+                          rounded-tl-[70px] rounded-br-[70px]
+                          rounded-tr-[20px] rounded-bl-[20px]
+                          backdrop-blur-md">
 
-    <img
-      src={journeyImg}
-      alt="Madiha"
-      className="w-full h-full object-cover"
-    />
+            <img
+              src={journeyImg}
+              alt="Madiha"
+              className="w-full h-full object-cover"
+            />
 
-  </div>
+          </div>
 
-  {/* Floating corner */}
-  <div className="absolute top-5 right-0 w-14 h-14
-                  border-t-2 border-r-2 border-purple-400 rounded-tr-2xl" />
+          <div className="absolute top-5 right-0 w-14 h-14
+                          border-t-2 border-r-2 border-purple-400 rounded-tr-2xl" />
 
-  <div className="absolute bottom-5 left-0 w-14 h-14
-                  border-b-2 border-pink-400 rounded-bl-2xl" />
+          <div className="absolute bottom-5 left-0 w-14 h-14
+                          border-b-2 border-pink-400 rounded-bl-2xl" />
 
-</div>
+        </div>
       </div>
     </section>
   );
@@ -576,32 +553,32 @@ function Contact() {
         </div>
 
         <form
-  onSubmit={(e) => e.preventDefault()}
-  className="glass-card w-full max-w-[500px] p-5 md:p-7"
->
-  <div className="grid gap-3">
-    <input
-      className="rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm outline-none transition focus:border-[#ff31d2]/60"
-      placeholder="Your Name"
-    />
+          onSubmit={(e) => e.preventDefault()}
+          className="glass-card w-full max-w-[500px] p-5 md:p-7"
+        >
+          <div className="grid gap-3">
+            <input
+              className="rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm outline-none transition focus:border-[#ff31d2]/60"
+              placeholder="Your Name"
+            />
 
-    <input
-      type="email"
-      className="rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm outline-none transition focus:border-[#ff31d2]/60"
-      placeholder="Your Email"
-    />
+            <input
+              type="email"
+              className="rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm outline-none transition focus:border-[#ff31d2]/60"
+              placeholder="Your Email"
+            />
 
-    <textarea
-      rows="6"
-      className="resize-none rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm outline-none transition focus:border-[#ff31d2]/60"
-      placeholder="Message"
-    />
+            <textarea
+              rows="6"
+              className="resize-none rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm outline-none transition focus:border-[#ff31d2]/60"
+              placeholder="Message"
+            />
 
-    <button className="glow-btn mt-1 w-full">
-      <Send size={15} /> Send Message
-    </button>
-  </div>
-</form>
+            <button className="glow-btn mt-1 w-full">
+              <Send size={15} /> Send Message
+            </button>
+          </div>
+        </form>
       </div>
       <p className="script absolute bottom-8 right-8 hidden text-2xl rotate-6 lg:block">Let's<br/>Work<br/>Together ♡</p>
     </section>
@@ -635,115 +612,98 @@ function App() {
 
         <section className="page-shell neon-border relative flex min-h-[350px] items-center overflow-hidden rounded-3xl p-8">
 
-  <GlowBackground />
+          <GlowBackground />
 
-  {/* Left Content */}
-  <div className="relative z-10">
-    <p className="text-3xl font-semibold text-[#ffb3f2]">
-      Thanks<br />for visiting!
-    </p>
+          <div className="relative z-10">
+            <p className="text-3xl font-semibold text-[#ffb3f2]">
+              Thanks<br />for visiting!
+            </p>
 
-    <p className="mt-4 max-w-sm text-sm leading-6 text-white/55">
-      Let's build something amazing together!
-    </p>
+            <p className="mt-4 max-w-sm text-sm leading-6 text-white/55">
+              Let's build something amazing together!
+            </p>
 
-    <p className="script mt-5 text-3xl">
-      Madiha ♡
-    </p>
-  </div>
+            <p className="script mt-5 text-3xl">
+              Madiha ♡
+            </p>
+          </div>
 
+          <div className="relative ml-auto w-[340px] h-[450px] flex items-center justify-center">
 
-  {/* Image Frame */}
-  <div className="relative ml-auto w-[340px] h-[450px] flex items-center justify-center">
+            <div className="absolute w-[280px] h-[360px] rounded-full bg-purple-500/20 blur-[90px]" />
 
-    {/* Soft Glow */}
-    <div className="absolute w-[280px] h-[360px] rounded-full bg-purple-500/20 blur-[90px]" />
+            <div className="
+              absolute
+              w-[310px] h-[420px]
+              rounded-[28px]
+              border border-purple-400/20
+              rotate-3
+            " />
 
+            <div
+              className="
+                relative
+                w-[310px] h-[420px]
+                p-6
+                rounded-[28px]
+                border border-white/15
+                bg-white/[0.04]
+                backdrop-blur-xl
+                shadow-[0_25px_80px_rgba(0,0,0,0.35)]
+                overflow-hidden
+              "
+            >
 
-    {/* Back Decorative Frame */}
-    <div className="
-      absolute
-      w-[310px] h-[420px]
-      rounded-[28px]
-      border border-purple-400/20
-      rotate-3
-    " />
+              <div className="
+                absolute top-0 left-10 right-10 h-[2px]
+                bg-gradient-to-r
+                from-transparent
+                via-purple-400
+                to-transparent
+              " />
 
+              <div className="relative w-full h-full flex items-center justify-center">
 
-    {/* Glass Card */}
-    <div
-      className="
-        relative
-        w-[310px] h-[420px]
-        p-6
-        rounded-[28px]
-        border border-white/15
-        bg-white/[0.04]
-        backdrop-blur-xl
-        shadow-[0_25px_80px_rgba(0,0,0,0.35)]
-        overflow-hidden
-      "
-    >
+                <img
+                  src={heroImg}
+                  alt="Madiha"
+                  className="
+                    relative z-10
+                    w-full h-full
+                    object-cover
+                  "
+                />
 
-      {/* Top Accent */}
-      <div className="
-        absolute top-0 left-10 right-10 h-[2px]
-        bg-gradient-to-r
-        from-transparent
-        via-purple-400
-        to-transparent
-      " />
+              </div>
 
+              <div className="
+                absolute bottom-4 left-4 right-4 h-12
+                rounded-2xl
+                bg-white/[0.07]
+                border border-white/10
+                backdrop-blur-md
+              " />
 
-      {/* Image Space */}
-      <div className="relative w-full h-full flex items-center justify-center">
+            </div>
 
-        <img
-          src={heroImg}
-          alt="Madiha"
-          className="
-            relative z-10
-            w-full h-full
-            object-cover
-          "
-        />
+            <div className="
+              absolute -top-2 -right-2
+              w-10 h-10
+              rounded-full
+              border border-purple-400/50
+              bg-purple-500/10
+            " />
 
-      </div>
+            <div className="
+              absolute -bottom-3 -left-3
+              w-16 h-16
+              rounded-full
+              border border-white/10
+            " />
 
+          </div>
 
-      {/* Bottom Glass Strip */}
-      <div className="
-        absolute bottom-4 left-4 right-4 h-12
-        rounded-2xl
-        bg-white/[0.07]
-        border border-white/10
-        backdrop-blur-md
-      " />
-
-    </div>
-
-
-    {/* Top Floating Circle */}
-    <div className="
-      absolute -top-2 -right-2
-      w-10 h-10
-      rounded-full
-      border border-purple-400/50
-      bg-purple-500/10
-    " />
-
-
-    {/* Bottom Floating Circle */}
-    <div className="
-      absolute -bottom-3 -left-3
-      w-16 h-16
-      rounded-full
-      border border-white/10
-    " />
-
-  </div>
-
-</section>
+        </section>
 
         <Footer />
       </main>
