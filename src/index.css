@@ -1,0 +1,167 @@
+
+@import "tailwindcss";
+
+/* Theme */
+@theme {
+  --color-dark-base: #050B14;
+  --color-dark-mid: #0B1F3A;
+  --color-dark-deep: #0F1B3D;
+  --color-dark-violet: #1A0B2E;
+
+  --color-brand-cyan: #06B6D4;
+  --color-brand-blue: #3B82F6;
+  --color-brand-purple: #8B5CF6;
+
+  --font-sans: 'Outfit', 'Inter', system-ui, sans-serif;
+}
+
+/* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: #050B14;
+  color: #e2e8f0;
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Root */
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button,
+input,
+textarea,
+select {
+  font-size: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #06B6D4;
+  outline-offset: 4px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1.1s step-end infinite;
+}
+
+/* Floating Photo */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Glow */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 28px rgba(6,182,212,0.4),
+      0 0 55px rgba(168,85,247,0.28);
+  }
+
+  50% {
+    box-shadow:
+      0 0 50px rgba(6,182,212,0.7),
+      0 0 90px rgba(168,85,247,0.5);
+  }
+}
+
+.glow-pulse {
+  animation: glowPulse 3.5s ease-in-out infinite;
+}
+
+/* Pulse */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .7;
+    transform: scale(1.3);
+  }
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: block !important;
+  }
+
+  header nav:not(.mobile-nav) {
+    display: none !important;
+  }
+
+  #home > div {
+    padding: 40px 24px !important;
+  }
+
+  #home > div > div {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  #home .text-left-col {
+    align-items: center !important;
+  }
+}
+
+/* Responsive Images */
+@media (max-width: 480px) {
+  img {
+    height: auto;
+  }
+}
